@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OrderManager</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      src = "https://kit.fontawesome.com/c9f9f90189.js";
+      crossorigin = "anonymous";
+    </script>
+  </body>
+  <script
+    crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/@babel/standalone/babel.min.js"
+  ></script>
+  <script type="text/babel">
+    const root = document.getElementById("root");
+    function Title() {
+      return (
+        <div id="Title">
+          <h1>주문서</h1>
+        </div>
+      );
+    }
+
+    function Menu01() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Menu01")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Menu01", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">소한마리 600g+600g</div>
+            <span className="Menu-SubTitle">
+              등심 + 꽃살 + 갈비살 + 부채살 + 우삼겹
+            </span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Menu02() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Menu02")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Menu02", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">한통한마리 500g+500g</div>
+            <span className="Menu-SubTitle">
+              삼겹살, 목살, 한정살, 가브리살
+            </span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Menu03() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Menu03")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Menu03", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">한통한마리 500g+500g</div>
+            <span className="Menu-SubTitle">소한마리+돼지한마리</span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Menu04() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Menu04")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Menu04", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">소 모듬</div>
+            <span className="Menu-SubTitle">소한마리+LA갈비</span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Menu05() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Menu05")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Menu05", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">양념LA갈비 500g+500g</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Meat01() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat01")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat01", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">소갈비살 600g</div>
+            <span className="Menu-SubTitle">(100g 7,500원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 600).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 600);
+            }}
+          >
+            600g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 600);
+            }}
+          >
+            600g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat02() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat02")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat02", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">차돌박이 600g</div>
+            <span className="Menu-SubTitle">(100g 7,500원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 600).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 600);
+            }}
+          >
+            600g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 600);
+            }}
+          >
+            600g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat03() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat03")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat03", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">소꽃등심 600g</div>
+            <span className="Menu-SubTitle">(100g 7,000원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 600).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 600);
+            }}
+          >
+            600g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 600);
+            }}
+          >
+            600g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat04() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat04")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat04", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">우삼겹살 600g</div>
+            <span className="Menu-SubTitle">(100g 6,500원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 600).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 600);
+            }}
+          >
+            600g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 600);
+            }}
+          >
+            600g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat05() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat05")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat05", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">육회 한접시 150g</div>
+            <span className="Menu-SubTitle">(100g 13,300원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 150).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 150);
+            }}
+          >
+            150g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 150);
+            }}
+          >
+            150g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat06() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat06")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat06", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">생삼겹살 150g</div>
+            <span className="Menu-SubTitle">(100g 6,600원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 150).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 150);
+            }}
+          >
+            150g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 150);
+            }}
+          >
+            150g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat07() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat07")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat07", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">생목살 150g</div>
+            <span className="Menu-SubTitle">(100g 6,600원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 150).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 150);
+            }}
+          >
+            150g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 150);
+            }}
+          >
+            150g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat08() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat08")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat08", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">생가브리살 150g</div>
+            <span className="Menu-SubTitle">(100g 8,000원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 150).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 150);
+            }}
+          >
+            150g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 150);
+            }}
+          >
+            150g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Meat09() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Meat09")) || 0
+      );
+      const [gram, SetGram] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Meat09", JSON.stringify(gram));
+      }, [gram]);
+
+      function Add() {
+        SetGram(gram + 100);
+      }
+      function Subtract() {
+        if (gram <= 0) {
+          SetGram(0);
+        } else SetGram(gram - 100);
+      }
+      function InitGram() {
+        SetGram(0);
+      }
+
+      let count = 0;
+
+      return (
+        <div className={gram > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">생항정살 150g</div>
+            <span className="Menu-SubTitle">(100g 8,000원)</span>
+          </div>
+          <span className={gram > 0 ? "Counting" : "UnCounting"}>
+            수량 : {(count = gram / 150).toFixed(1)}개 / {gram}g
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            100g추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            100g제거
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram + 150);
+            }}
+          >
+            150g추가
+          </button>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              SetGram(gram - 150);
+            }}
+          >
+            150g제거
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              InitGram();
+            }}
+          >
+            초기화
+          </button>
+        </div>
+      );
+    }
+    function Bev01() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Bev01")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Bev01", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">음료</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Bev02() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Bev02")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Bev02", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">소주</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Bev03() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Bev03")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Bev03", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">맥주</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Bev04() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Bev04")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Bev04", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">청하</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Bev05() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Bev05")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Bev05", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">백세주</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Bev06() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Bev06")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Bev06", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">복분자</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Side01() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Side01")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Side01", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">공기밥</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Side02() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Side02")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Side02", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">소면</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Side03() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Side03")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Side03", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">물냉면</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Side04() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Side04")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Side04", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">비빔냉면</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+    function Side05() {
+      const data = React.useState(
+        () => JSON.parse(window.localStorage.getItem("Side05")) || 0
+      );
+      const [count, SetCount] = data;
+
+      React.useEffect(() => {
+        window.localStorage.setItem("Side05", JSON.stringify(count));
+      }, [count]);
+
+      function Add() {
+        SetCount(count + 1);
+      }
+      function Subtract() {
+        if (count <= 0) {
+          SetCount(0);
+        } else SetCount(count - 1);
+      }
+      return (
+        <div className={count > 0 ? "Selected" : "Deselected"}>
+          <div className="Menu-Title__Box">
+            <div className="Menu-Title">모둠버섯</div>
+            <span className="Menu-SubTitle"></span>
+          </div>
+          <span className={count > 0 ? "Counting" : "UnCounting"}>
+            주문 개수 : {count}
+          </span>
+          <button
+            className="AddBtn"
+            onClick={() => {
+              Add();
+            }}
+          >
+            추가
+          </button>
+          <button
+            className="SubBtn"
+            onClick={() => {
+              Subtract();
+            }}
+          >
+            취소
+          </button>
+        </div>
+      );
+    }
+
+    class Menu {
+      constructor(category, name, cost, counter) {
+        this.category = category;
+        this.name = name;
+        this.cost = cost;
+        this.counter = counter;
+      }
+    }
+    function OrderList() {
+      return (
+        <form>
+          <div className="Menu-Category">
+            <h1>세트 메뉴</h1>
+          </div>
+          <Menu01 />
+          <Menu02 />
+          <Menu03 />
+          <Menu04 />
+          <Menu05 />
+          <div className="Menu-Category">
+            <h1>소고기</h1>
+          </div>
+          <Meat01 />
+          <Meat02 />
+          <Meat03 />
+          <Meat04 />
+          <Meat05 />
+          <div className="Menu-Category">
+            <h1>돼지고기</h1>
+          </div>
+          <Meat06 />
+          <Meat07 />
+          <Meat08 />
+          <Meat09 />
+
+          <div className="Menu-Category">
+            <h1>음/주류</h1>
+          </div>
+          <Bev01 />
+          <Bev02 />
+          <Bev03 />
+          <Bev04 />
+          <Bev05 />
+          <Bev06 />
+          <div className="Menu-Category">
+            <h1>후식류</h1>
+          </div>
+          <Side01 />
+          <Side02 />
+          <Side03 />
+          <Side04 />
+          <Side05 />
+        </form>
+      );
+    }
+    function App() {
+      const data = React.useState();
+      return (
+        <div>
+          <Title />
+          <OrderList />
+        </div>
+      );
+    }
+    ReactDOM.createRoot(root).render(<App />);
+  </script>
+</html>

@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+@import "reset.css";
+
+/*Components*/
+
+/*Screens*/
+
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #3c434b;
+}
+#Title {
+  display: flex;
+  padding-top: 20px;
+  font-size: 30px;
+  justify-content: center;
+  font-weight: 900;
+}
+.Menu-Category {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  margin-top: 40px;
+  border-top: 2px solid #3c434b;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Menu-Category h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.Menu-Title__Box {
+  width: 45%;
+}
+.Menu-Title {
+  padding-left: 15px;
+  font-size: 20px;
+}
+.Menu-SubTitle {
+  padding-left: 15px;
+  font-size: 10px;
+}
+
+.Selected {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #3c434ba6;
+  padding: 10px 0;
+  justify-content: space-between;
+
+  background-color: teal;
+  color: aliceblue;
+  font-weight: 500;
+}
+
+.Deselected {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid #3c434ba6;
+  padding: 10px 0;
+  justify-content: space-between;
+
+  background-color: white;
+  color: #3c434b;
+  font-weight: 300;
+}
+
+.Counting {
+  font-weight: 800;
+}
+
+.UnCounting {
+  font-weight: 300;
+}
